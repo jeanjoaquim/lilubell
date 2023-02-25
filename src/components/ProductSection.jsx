@@ -4,8 +4,10 @@ import ProductsList from './ProductsList';
 function ProductSection({ products }) {
     return (
         <section className='product-section'>
-            <Tabs />
-            <ProductsList products={products} />
+            <div className="product-container">
+                <Tabs />
+                <ProductsList products={products} />
+            </div>
         </section>
         
     )

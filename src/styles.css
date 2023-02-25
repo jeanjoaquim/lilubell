@@ -9,6 +9,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    color: #606060;
 }
 
 header {
@@ -23,6 +24,13 @@ header {
     margin: 0 auto;
 }
 
+.search-bar {
+    width: 100%;
+    margin: 0 42px;
+    min-width: 160px;
+    max-width: 400px;
+}
+
 .logo {
     font-family: 'Six Caps', sans-serif;
     color: #A46456;
@@ -32,10 +40,21 @@ header {
 
 .input-text {
     height: 42px;
+    width: 100%;
     border-radius: 8px;
     border: none;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    border: 1px solid rgb(211, 211, 211);
+    /*box-shadow: 5px 5px 5px rgba(0,0,0,0.2);*/
     padding: 1rem;
+}
+
+.mobile-version {
+    display: flex;
+    align-items: center;
+}
+
+.desktop-version {
+    display: none;
 }
 
 .burger-menu {
@@ -45,10 +64,19 @@ header {
 
 /*-------------------------------HERO SECTION---------------------------*/
 
+.hero {
+    height: calc(100vh - 8rem);
+}
+
+.hero-container {
+    margin: 2rem 0;
+}
+
 .hero-image {
-    width: 100vw;
+    width: 350px;
     position: relative;
-    left: calc(-50vw + 50%);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .cta-container {
@@ -102,7 +130,7 @@ header {
 /*-------------------------------PRODUCTS--------------------------------*/
 
 .product-section {
-    margin: 2rem 0;
+    padding: 2rem 0;
 }
 
 .product-tabs {
@@ -111,9 +139,8 @@ header {
 
 .product-tabs ul {
     height: 42px;
-    width: 100vw;
-    position: relative;
-    left: calc(-50vw + 50%);
+    margin: 0 auto;
+    max-width: 450px;
     list-style: none;
     display: flex;
     align-items: center;
@@ -133,11 +160,13 @@ header {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-width: 450px;
+    margin: 0 auto;
     gap: 10px;
 }
 
 .product-item {
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    border: 1px solid #d5d5d5;
 }
 
 .product-thumb {
@@ -165,7 +194,9 @@ header {
     padding: 2rem 0;
 }
 
-.footer-section h3 {
+.newsletter-form label {
+    display: block;
+    font-weight: bold;
     font-size: 1.5rem;
     margin: 1rem 0;
 }
@@ -173,9 +204,11 @@ header {
 .newsletter-form input {
     height: 42px;
     width: calc(100% - 6rem);
+    max-width: 300px;
     border-radius: 8px 0 0 8px;
     border: none;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    border: 1px solid #d5d5d5;
+    padding: 0 1rem;
 }
 
 .newsletter-form button {
@@ -214,4 +247,263 @@ header {
 .social {
     width: 32px;
     height: 32px;
+}
+
+@media (min-width: 500px) {
+
+    .hero {
+        height: unset;
+    }
+
+    .hero-image {
+        width: 240px;
+    }
+
+    .cta-container {
+        width:350px;
+        margin: 0 auto;
+    }
+
+    .hero-container {
+        margin: 0;
+    }
+}
+
+@media (min-width: 720px) {
+
+    .hero {
+        height: calc(100vh - 8rem);
+    }
+
+    .hero-container {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 6rem 0;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .hero-image {
+        left: 0;
+        transform: translateX(0);
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .product-section {
+        position: relative;
+        left: calc(-50vw + 50%);
+        background-color: #F5EFEC;
+        width: 100vw;
+    }
+
+    .product-container {
+        background-color: #FFF;
+        margin: 0 auto;
+        padding: 0 2rem 2rem 2rem;
+        width: 90%;
+    }
+
+    .products-list {
+        max-width: 600px;
+    }
+
+    .product-thumb {
+        min-height: 250px;
+    }
+
+}
+
+@media (min-width: 920px) {
+
+    /*HEADER*/
+    .mobile-version {
+        display: none;
+    }
+
+    .desktop-version {
+        display: initial;
+    }
+
+    .nav-menu-list {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-menu-item {
+        padding: 1rem;
+        text-transform: capitalize;
+    }
+
+    /*HERO*/
+
+    .hero-container {
+        margin: 3rem 0;
+    }
+
+    .hero-image {
+        max-width: 400px;
+    }
+
+    .costuras,
+    .criativas {
+        font-size: 9rem;
+        line-height: 6rem;
+    }
+
+    .costuras {
+        left: -5.3rem;
+    }
+
+    .criativas {
+        left: 7.5rem;
+    }
+
+    .cta-container {
+        width: 400px;
+    }
+
+    .cta-container p {
+        top: 7.5rem;
+        left: 8rem;
+        font-size: 15px;
+        line-height: calc(15px * 1.5);
+    }
+
+    /*PRODUCTS*/
+
+    .product-container {
+        max-width: 90%;
+    }
+
+    .products-list {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px 10px;
+        max-width: 900px;
+    }
+
+    .product-section {
+        position: relative;
+        left: calc(-50vw + 50%);
+        background-color: #F5EFEC;
+        width: 100vw;
+    }
+
+    .product-container {
+        background-color: #FFF;
+        margin: 0 auto;
+        padding: 0 2rem 2rem 2rem;
+    }
+
+    .product-item {
+        height: 350px;
+    }
+
+    .product-thumb {
+        height: 200px;
+    }
+
+    /*FOOTER*/
+    .footer-section {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+
+    .footer-content {
+        width: 100%;
+        max-width: 50%;
+        padding: 0;
+    }
+
+    .privacy-policies h3,
+    .socials h3 {
+        text-transform: capitalize;
+        font-size: 24px;
+        margin: 1rem 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    /*HERO*/
+    .costuras,
+    .criativas {
+        font-size: 11rem;
+    }
+
+    .costuras {
+        left: -5.4rem;
+        top: 5.5rem;
+    }
+
+    .criativas {
+        left: 10.5rem;
+    }
+
+    .cta-container {
+        width:500px;
+    }
+
+    .cta-container p {
+        top: 8rem;
+        left: 11rem;
+    }
+
+    .cta-container button {
+        right: 0;
+        width: calc(100% - 10.5rem)
+    }
+
+    .hero-image {
+        left: 0;
+        transform: translateX(0);
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+@media (min-width: 1240px) {
+    /*HERO*/
+    .costuras,
+    .criativas {
+        font-size: 14rem;
+    }
+
+    .costuras {
+        left: -8.4rem;
+        top: 7rem;
+    }
+
+    .criativas {
+        left: 12rem;
+    }
+
+    .cta-container {
+        width:600px;
+    }
+
+    .cta-container p {
+        top: 11rem;
+        left: 12rem;
+        font-size: 18px;
+        line-height: calc(18px * 1.5);
+    }
+
+    .cta-container button {
+        top: 20rem;
+        right: 0;
+        width: calc(100% - 12rem)
+    }
+
+    .hero-image {
+        left: 0;
+        transform: translateX(0);
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .hero-container {
+        margin: 0;
+    }
 }

@@ -5,23 +5,23 @@ import Instagram from '../images/svg/instagram.svg';
 function Footer() {
     return(
         <footer className="footer-section">
-            <h3>Inscreva-se na newsletter</h3>
             <form className="newsletter-form">
+                <label>Inscreva-se na newsletter</label>
                 <input type='text' placeholder='E-mail' />
                 <button>inscrever-se</button>
             </form>
             <div className="footer-content">
                 <div className="privacy-policies">
                     <h3>legal</h3>
-                    <p>termos de serviço</p>
-                    <p>política de privacidade</p>
+                    <p>Termos de serviço</p>
+                    <p>Política de privacidade</p>
                 </div>
                 <div className="socials">
-                    <h3>Redes sociais</h3>
+                    <h3>redes sociais</h3>
                     <div className="social-icons">
-                        <img src={Whatsapp} className='social whatsapp' />
-                        <img src={Pinterest} className='social pinterest' />
-                        <img src={Instagram} className='social instagram' />
+                        <img src={Whatsapp} className='social whatsapp' alt='' />
+                        <img src={Pinterest} className='social pinterest' alt='' />
+                        <img src={Instagram} className='social instagram' alt='' />
                     </div>
                     
                 </div>
