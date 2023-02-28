@@ -6,7 +6,7 @@ function Header() {
                 <input type='text' className='input-text' placeholder='Pesquisar...' />
             </form>
             <div className="mobile-version">
-                <span class="material-icons burger-menu">menu</span>
+                <span className="material-icons burger-menu">menu</span>
             </div>
 
             <div className="desktop-version">

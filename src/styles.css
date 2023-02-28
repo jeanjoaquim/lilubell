@@ -127,6 +127,50 @@ header {
     text-transform: uppercase;
 }
 
+/*-------------------------------CATEGORIES--------------------------------*/
+
+.categories-section {
+    position: relative;
+    width: 100vw;
+    left: calc(-50vw + 50%);
+    background-color: #272727;
+    color: white;
+    padding: 2rem 0;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.categories-container {
+    width: 90%;
+    margin: 0 auto;
+    text-transform: capitalize;
+}
+
+.categories-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    height: 400px;
+    gap: 15px;
+}
+
+.category-item {
+    background-color: #606060;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
 /*-------------------------------PRODUCTS--------------------------------*/
 
 .product-section {
