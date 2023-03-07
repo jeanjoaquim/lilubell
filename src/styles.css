@@ -330,8 +330,13 @@ header {
 }
 
 @media (min-width: 390px) {
+
+    .hero-container {
+        width: 100%;
+    }
+
     .hero-image {
-        max-width: 100%;
+        max-width: 240px;
     }
 
     .costuras,
@@ -350,30 +355,12 @@ header {
 
     .cta-container {
         font-size: 14px;
-    }
-}
-
-@media (min-width: 390px) {
-    .hero-image {
-        max-width: 100%;
+        width: 350px;
+        margin: 0 auto;
     }
 
-    .costuras,
-    .criativas {
-        font-size: 8rem;
-    }
-
-    .costuras {
-        left: -5rem;
-        top: 4rem;
-    }
-
-    .criativas {
-        top: -1rem;
-    }
-
-    .cta-container {
-        font-size: 14px;
+    .cta-container p {
+        top: 8rem;
     }
 }
 
@@ -385,11 +372,6 @@ header {
 
     .hero-image {
         width: 240px;
-    }
-
-    .cta-container {
-        width:350px;
-        margin: 0 auto;
     }
 
     .hero-container {
