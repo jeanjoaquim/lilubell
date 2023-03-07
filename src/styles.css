@@ -16,7 +16,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0;
+    /*padding: 1rem 0;*/
+    height: 8svh;
 }
 
 .container {
@@ -27,7 +28,7 @@ header {
 .search-bar {
     width: 100%;
     margin: 0 42px;
-    min-width: 160px;
+    min-width: 100px;
     max-width: 400px;
 }
 
@@ -35,7 +36,7 @@ header {
     font-family: 'Six Caps', sans-serif;
     color: #A46456;
     font-size: 3rem;
-    line-height: 1rem;
+    padding-bottom: .5rem;
 }
 
 .input-text {
@@ -65,7 +66,9 @@ header {
 /*-------------------------------HERO SECTION---------------------------*/
 
 .hero {
-    height: calc(100vh - 8rem);
+    height: 92svh;
+    display: flex;
+    align-items: center;
 }
 
 .hero-container {
@@ -73,7 +76,7 @@ header {
 }
 
 .hero-image {
-    width: 350px;
+    max-width: 70%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -88,15 +91,15 @@ header {
 .criativas {
     font-family: 'Six Caps', sans-serif;
     color: #A46456;
-    font-size: 8rem;
+    font-size: 7rem;
     line-height: 7rem;
 }
 
 .costuras {
     transform: rotate(270deg);
     position: absolute;
-    left: -5rem;
-    top: 4rem;
+    left: -4rem;
+    top: 5rem;
 }
 
 .criativas {
@@ -104,14 +107,14 @@ header {
     left: 6.5rem;
     color: #FFF;
     text-shadow: -1px -1px 0 #A46456, 1px -1px 0 #A46456, -1px 1px 0 #A46456, 1px 1px 0 #A46456;
-    top: -1rem;
+    top: 1rem;
 }
 
 .cta-container p {
     position: absolute;
-    top: 7rem;
+    top: 9rem;
     left: 7rem;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .cta-container button {
@@ -152,8 +155,9 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     list-style: none;
-    height: 400px;
     gap: 15px;
+    margin: 1rem auto 0 auto;
+    max-width: 450px;
 }
 
 .category-item {
@@ -162,6 +166,7 @@ header {
     align-items: center;
     justify-content: center;
     text-transform: capitalize;
+    height: 150px;
 }
 
 
@@ -283,6 +288,12 @@ header {
     width: 200px;
 }
 
+.privacy-policies h3,
+.socials h3 {
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+
 .social-icons {
     display: flex;
     justify-content: space-between;
@@ -293,11 +304,84 @@ header {
     height: 32px;
 }
 
+@media (max-width: 359px) {
+    
+    .costuras,
+    .criativas {
+        position: static;
+        font-size: 23vw;
+        line-height: 4rem;
+        display: inline;
+    }
+
+    .costuras {
+        transform: rotate(0);
+        margin-right: .5rem;
+    }
+
+    .cta-container p {
+        position: static;
+        margin: 1rem 0;
+    }
+
+    .cta-container button {
+        position: static;
+    }
+}
+
+@media (min-width: 390px) {
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .costuras,
+    .criativas {
+        font-size: 8rem;
+    }
+
+    .costuras {
+        left: -5rem;
+        top: 4rem;
+    }
+
+    .criativas {
+        top: -1rem;
+    }
+
+    .cta-container {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 390px) {
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .costuras,
+    .criativas {
+        font-size: 8rem;
+    }
+
+    .costuras {
+        left: -5rem;
+        top: 4rem;
+    }
+
+    .criativas {
+        top: -1rem;
+    }
+
+    .cta-container {
+        font-size: 14px;
+    }
+}
+
 @media (min-width: 500px) {
 
-    .hero {
+    /*.hero {
         height: unset;
-    }
+    }*/
 
     .hero-image {
         width: 240px;
@@ -309,15 +393,15 @@ header {
     }
 
     .hero-container {
-        margin: 0;
+        margin: 0 auto;
     }
 }
 
 @media (min-width: 720px) {
 
-    .hero {
+    /*.hero {
         height: calc(100vh - 8rem);
-    }
+    }*/
 
     .hero-container {
         display: flex;
@@ -334,6 +418,14 @@ header {
         width: 100%;
         max-width: 300px;
     }
+
+    /*CATEGORIES*/
+    .categories-list {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 640px;
+    }
+
+    /*PRODUCTS*/
 
     .product-section {
         position: relative;
@@ -463,9 +555,7 @@ header {
 
     .privacy-policies h3,
     .socials h3 {
-        text-transform: capitalize;
         font-size: 24px;
-        margin: 1rem 0;
     }
 }
 

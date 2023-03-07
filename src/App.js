@@ -15,7 +15,7 @@ function App() {
         <div className='container'>
             <Header />
             <HeroSection />
-            <CategoriesSection products={Products} />
+            {/* <CategoriesSection products={Products} /> */}
             <ProductSection products={Products} />
             <Footer />
         </div>
