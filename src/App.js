@@ -11,13 +11,15 @@ function App() {
     const [Products, setProducts] = useState(ProductData);
 
     return(
-        <div className='container'>
+        <>
             <Header />
-            <HeroSection />
-            {/* <CategoriesSection products={Products} /> */}
-            <ProductSection products={Products} />
-            <Footer />
-        </div>
+            <div className='container'>
+                <HeroSection />
+                {/* <CategoriesSection products={Products} /> */}
+                <ProductSection products={Products} />
+                <Footer />
+            </div>
+        </>
     );
 }
 

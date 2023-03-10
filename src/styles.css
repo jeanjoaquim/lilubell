@@ -18,6 +18,20 @@ header {
     justify-content: space-between;
     /*padding: 1rem 0;*/
     height: 8svh;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #FFF;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 0 5vw;
+    background-color: #FFF;
 }
 
 .container {
@@ -27,7 +41,8 @@ header {
 
 .search-bar {
     width: 100%;
-    margin: 0 42px;
+    /*margin: 0 42px;*/
+    margin: 0 1rem;
     min-width: 100px;
     max-width: 400px;
 }
@@ -58,9 +73,47 @@ header {
     display: none;
 }
 
+.mobile-header-buttons {
+    width: 24px;
+    height: 24px;
+    background-color: #606060;
+    margin: .5rem;
+    border-radius: 50%;
+}
+
 .burger-menu {
     font-size: 3rem;
     color: #A46456;
+}
+
+.show-mobile-nav-menu {
+    top: 8vh;
+}
+
+.mobile-nav-menu {
+    position: absolute;
+    left: 0;
+    background-color: #FFF;
+    width: 100vw;
+    height: 92svh;
+    padding: 4rem 0;
+    transition: .5s ease;
+    z-index: -1;
+}
+
+.hide-mobile-nav-menu {
+    top: -100vh;
+}
+
+.mobile-nav-list {
+    list-style: none;
+}
+
+.mobile-nav-item {
+    padding: 2rem 0;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.5rem;
 }
 
 /*-------------------------------HERO SECTION---------------------------*/
@@ -452,6 +505,7 @@ header {
 @media (min-width: 920px) {
 
     /*HEADER*/
+
     .mobile-version {
         display: none;
     }
@@ -503,7 +557,7 @@ header {
     /*CART MENU*/
 
     .cart-container {
-        position: absolute;
+        position: fixed;
         width: 100vw;
         height: 100vh;
         background-color: rgba(0,0,0,0.2);
@@ -538,7 +592,9 @@ header {
         display: flex;
         flex-direction: column;
         gap: .5rem;
-        padding: 2rem 0;
+        margin: 2rem 0;
+        height: 400px;
+        overflow-y: scroll;
     }
 
     .cart-item {
