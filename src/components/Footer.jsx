@@ -7,8 +7,10 @@ function Footer() {
         <footer className="footer-section">
             <form className="newsletter-form">
                 <label>Inscreva-se na newsletter</label>
-                <input type='text' placeholder='E-mail' />
-                <button>inscrever-se</button>
+                <div>
+                    <input className='input-text' type='text' placeholder='E-mail' />
+                    <button>inscrever-se</button>
+                </div>
             </form>
             <div className="footer-content">
                 <div className="privacy-policies">

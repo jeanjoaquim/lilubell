@@ -12,26 +12,9 @@ body {
     color: #606060;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /*padding: 1rem 0;*/
-    height: 8svh;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    background-color: #FFF;
-}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100vw;
-    margin: 0 auto;
-    padding: 0 5vw;
-    background-color: #FFF;
+a {
+    text-decoration: none;
+    color: #606060;
 }
 
 .container {
@@ -39,7 +22,28 @@ header {
     margin: 0 auto;
 }
 
-.search-bar {
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFF;
+    height: 8svh;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.header-search-bar {
     width: 100%;
     /*margin: 0 42px;*/
     margin: 0 1rem;
@@ -60,16 +64,15 @@ header {
     border-radius: 8px;
     border: none;
     border: 1px solid rgb(211, 211, 211);
-    /*box-shadow: 5px 5px 5px rgba(0,0,0,0.2);*/
     padding: 1rem;
 }
 
-.mobile-version {
+.nav-container-mobile-version {
     display: flex;
     align-items: center;
 }
 
-.desktop-version {
+.nav-container-desktop-version {
     display: none;
 }
 
@@ -95,7 +98,7 @@ header {
     left: 0;
     background-color: #FFF;
     width: 100vw;
-    height: 92svh;
+    height: 92vh;
     padding: 4rem 0;
     transition: .5s ease;
     z-index: -1;
@@ -121,11 +124,13 @@ header {
 .hero {
     height: 92svh;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .hero-container {
     margin: 2rem 0;
+    max-width: 1350px;
 }
 
 .hero-image {
@@ -231,7 +236,7 @@ header {
 
 /*-------------------------------PRODUCTS--------------------------------*/
 
-.product-section {
+.bg-content-section {
     padding: 2rem 0;
 }
 
@@ -312,6 +317,10 @@ header {
     padding: 2rem 0;
 }
 
+.newsletter-form div {
+    display: flex;
+}
+
 .newsletter-form label {
     display: block;
     font-weight: bold;
@@ -320,13 +329,8 @@ header {
 }
 
 .newsletter-form input {
-    height: 42px;
-    width: calc(100% - 6rem);
-    max-width: 300px;
+    width: 300px;
     border-radius: 8px 0 0 8px;
-    border: none;
-    border: 1px solid #d5d5d5;
-    padding: 0 1rem;
 }
 
 .newsletter-form button {
@@ -336,7 +340,7 @@ header {
     border: none;
     border-radius: 0 8px 8px 0;
     color: #FFF;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    /*box-shadow: 5px 5px 5px rgba(0,0,0,0.2);*/
 }
 
 .footer-content {
@@ -372,6 +376,92 @@ header {
     width: 32px;
     height: 32px;
 }
+
+
+
+/*--------------------------------------
+/*--------------------------------------
+/*--------------------------------------
+ABOUT PAGE
+/*--------------------------------------
+/*--------------------------------------
+/*--------------------------------------*/
+
+.bg-about-page {
+    background-color: #606060;
+    height: 400px;
+    width: 100vw;
+    position: relative;
+    left:calc(-50vw + 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 2rem;
+}
+
+.about-title, .about-text {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-title {
+    margin-bottom: 1rem;
+}
+
+.about-text {
+    line-height: calc(1rem * 1.5);
+    margin-bottom: 1rem;
+    text-indent: 1rem;
+}
+
+
+
+
+
+/*--------------------------------------
+/*--------------------------------------
+/*--------------------------------------
+USER PAGE
+/*--------------------------------------
+/*--------------------------------------
+/*--------------------------------------*/
+
+.user-bio-container {
+    display: flex;
+    align-items: center;
+}
+
+.user-bio-thumbnail {
+    width: 100px;
+    height: 100px;
+    background-color: #606060;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.user-bio-container p {
+    color: #A46456;
+}
+
+.user-data-container {
+    margin-top: 3rem;
+}
+
+.user-data {
+    padding: .5rem 0;
+}
+
+.user-data h3,
+.user-data p {
+    font-size: 1rem;
+}
+
+
+
+
+
+
 
 @media (max-width: 359px) {
     
@@ -478,17 +568,17 @@ header {
 
     /*PRODUCTS*/
 
-    .product-section {
+    .bg-content-section {
         position: relative;
         left: calc(-50vw + 50%);
         background-color: #F5EFEC;
         width: 100vw;
     }
 
-    .product-container {
+    .content-container {
         background-color: #FFF;
         margin: 0 auto;
-        padding: 0 2rem 2rem 2rem;
+        padding: 4rem 2rem;
         width: 90%;
     }
 
@@ -500,17 +590,31 @@ header {
         min-height: 250px;
     }
 
+    /*USER PAGE*/
+    .user-page {
+        margin: 0 auto;
+        width: 600px;
+    }
+
+    .user-data {
+        display: flex;
+    }
+
+    .user-data h3 {
+        width: 40%;
+    }
+
 }
 
 @media (min-width: 920px) {
 
     /*HEADER*/
 
-    .mobile-version {
+    .nav-container-mobile-version {
         display: none;
     }
 
-    .desktop-version {
+    .nav-container-desktop-version {
         display: initial;
     }
 
@@ -553,6 +657,40 @@ header {
         border: none;
         cursor: pointer;
     }
+
+    /*PROFILE MENU*/
+
+    .dropdown-profile-menu-container {
+        position: absolute;
+        width: 250px;
+        background-color: #FFF;
+        box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+        top: 100%;
+        right: 0;
+    }
+
+    .dropdown-user-profile-container {
+        display: flex;
+        padding: 1rem;
+    }
+
+    .dropdown-user-thumbnail {
+        background-color: #606060;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: .5rem;
+    }
+
+    .dropdown-menu-list {
+        list-style: none;
+    }
+
+    .dropdown-menu-list-item {
+        padding: 1rem;
+    }
+
+
 
     /*CART MENU*/
 
@@ -686,8 +824,8 @@ header {
 
     /*PRODUCTS*/
 
-    .product-container {
-        max-width: 90%;
+    .content-container {
+        max-width: 1350px;
     }
 
     .products-list {
@@ -696,17 +834,16 @@ header {
         max-width: 900px;
     }
 
-    .product-section {
+    .bg-content-section {
         position: relative;
         left: calc(-50vw + 50%);
         background-color: #F5EFEC;
         width: 100vw;
     }
 
-    .product-container {
+    .content-container {
         background-color: #FFF;
         margin: 0 auto;
-        padding: 0 2rem 2rem 2rem;
     }
 
     .product-item {
@@ -721,7 +858,9 @@ header {
     .footer-section {
         display: flex;
         justify-content: space-between;
+        margin: 0 auto;
         margin-bottom: 2rem;
+        max-width: 1350px;
     }
 
     .footer-content {
