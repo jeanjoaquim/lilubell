@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import CartIcon from '../images/svg/cart.svg';
+import HeaderProfileIcon from '../images/user-profile-unsplash.jpg';
 import CartMenu from './CartMenu';
 import DropdownProfileMenu from './DropdownProfileMenu';
 
@@ -80,13 +82,13 @@ function Header() {
                                 <li className="nav-menu-item">sobre</li>
                             </Link>
                             <li className="nav-menu-buttons">
-                                <button onClick={() => open()} className="header-buttons"></button>
+                                <img src={CartIcon} onClick={() => open()} alt='' />
                             </li>
                             <li className="nav-menu-buttons">
                                 <div onMouseLeave={() => hideProfileMenu()} onMouseOver={() => showProfileMenu()} className="header-buttons">
+                                    <img src={HeaderProfileIcon} alt='' />
                                     {showDropdownProfileMenu && <DropdownProfileMenu />}
                                 </div>
-                                
                             </li>
                         </ul>
                     </nav>

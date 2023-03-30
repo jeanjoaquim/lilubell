@@ -27,7 +27,8 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: #FFF;
-    height: 8svh;
+    /*height: 8svh; can be a problem with mobile */
+    height: 4rem;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -295,7 +296,7 @@ header {
 .product-name {
     font-weight: normal;
     font-size: 14px;
-    text-transform: capitalize
+    text-transform: capitalize;
 }
 
 .product-price {
@@ -404,24 +405,52 @@ ABOUT PAGE
     align-items: center;
     justify-content: center;
     color: #FFF;
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
-.about-title, .about-text {
-    max-width: 700px;
+.about-container {
+    max-width: 1350px;
     margin: 0 auto;
 }
 
-.about-title {
+.about-text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 640px;
+    margin: 5rem auto;
+}
+
+.title-t1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.text-t1 {
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.about-text {
-    line-height: calc(1rem * 1.5);
-    margin-bottom: 1rem;
-    text-indent: 1rem;
+.about-text-block-right,
+.about-text-block-left {
+    max-width: 640px;
+    margin: 14rem auto;
 }
 
+.about-text-block-image {
+    width: 100%;
+    height: calc(100vw / 1.7);
+    max-height: 400px;
+    background-color: #606060;
+    margin-bottom: 2rem;
+}
+
+.text-t2 {
+    line-height: 1.5;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
 
 
 
@@ -641,6 +670,12 @@ USER PAGE
         cursor: pointer;
     }
 
+    .nav-menu-buttons img {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+    }
+
     .nav-menu-item::after {
         position: absolute;
         background-color: #A46456;
@@ -663,6 +698,7 @@ USER PAGE
         border-radius: 50%;
         border: none;
         cursor: pointer;
+        overflow: hidden;
     }
 
     /*PROFILE MENU*/
@@ -861,6 +897,8 @@ USER PAGE
         height: 200px;
     }
 
+
+
     /*FOOTER*/
     .footer-section {
         display: flex;
@@ -918,6 +956,7 @@ USER PAGE
         width: 100%;
         max-width: 450px;
     }
+
 }
 
 @media (min-width: 1240px) {
@@ -962,5 +1001,32 @@ USER PAGE
 
     .hero-container {
         margin: 0;
+    }
+
+    /*ABOUT*/
+
+    .about-text-block-right,
+    .about-text-block-left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .about-text-block-left {
+        flex-direction: row-reverse;
+    }
+
+    .about-text-block-image {
+        width: 450px;
+        height: 300px;
+        margin-bottom: 0;
+    }
+
+    .about-text-block-right .title-t1,
+    .about-text-block-right .text-t2,
+    .about-text-block-left .title-t1,
+    .about-text-block-left .text-t2 {
+        width: 600px;
     }
 }
