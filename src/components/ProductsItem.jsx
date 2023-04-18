@@ -9,6 +9,7 @@ function ProductsItem({ item }) {
             </div>
             <h3 className="product-name">{item.name}</h3>
             <p className="product-price">{priceFormat}</p>
+            <div className="save-icon"></div>
         </li>
     );
 }

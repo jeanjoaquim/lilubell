@@ -1,7 +1,7 @@
 function AboutPage() {
     return (
       <>
-        <div className="bg-about-page">Lilubell</div>
+        <div className="bg-about-page"><span>Lilubell</span></div>
         <div className="about-container">
             <div className="about-text-block">
                 <h2 className="title-t1">Lorem Ipsum</h2>
@@ -20,7 +20,7 @@ function AboutPage() {
             </div>
 
             <div className="about-text-block-right">
-                <div className="about-text-block-image"></div>
+                <div className="about-text-block-image about-image1"></div>
                 <div>
                     <h2 className="title-t1">Lorem Ipsum</h2>
                     <div>
@@ -39,7 +39,7 @@ function AboutPage() {
             </div>
 
             <div className="about-text-block-left">
-                <div className="about-text-block-image"></div>
+                <div className="about-text-block-image about-image2"></div>
                 <div>
                     <h2 className="title-t1">Lorem Ipsum</h2>
                     <div>
@@ -58,7 +58,7 @@ function AboutPage() {
             </div>
 
             <div className="about-text-block-right">
-                <div className="about-text-block-image"></div>
+                <div className="about-text-block-image about-image3"></div>
                 <div>
                     <h2 className="title-t1">Lorem Ipsum</h2>
                     <div>

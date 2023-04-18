@@ -42,9 +42,13 @@ function Header() {
                     <input type='text' className='input-text' placeholder='Pesquisar...' />
                 </form>
                 <div className="nav-container-mobile-version">
-                    <div className="mobile-header-buttons"></div>
+                    <div className="mobile-header-buttons">
+                        <img src={CartIcon} onClick={() => open()} alt='' />
+                    </div>
                     <Link to='/user'>
-                        <div className="mobile-header-buttons"></div>
+                        <div className="mobile-header-buttons">
+                            <img src={HeaderProfileIcon} alt='' />
+                        </div>
                     </Link>
                     <span onClick={() => toggleMenu()} className="material-icons burger-menu">menu</span>
                     <div className={`mobile-nav-menu ${showMobileMenu ? 'show-mobile-nav-menu' : 'hide-mobile-nav-menu'}`} >
