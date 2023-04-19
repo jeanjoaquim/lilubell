@@ -280,8 +280,30 @@ header {
 }
 
 .product-item {
-    border: 1px solid #d5d5d5;
     position: relative;
+    cursor: pointer;
+}
+
+.product-item:hover {
+    border: 1px solid #D5D5D5;
+    margin:-1px;
+}
+
+.product-item:hover .save-icon {
+    display: initial;
+}
+
+.product-thumb {
+    overflow: hidden;
+}
+
+.thumb-image {
+    transform: scale(1);
+    transition: transform .2s ease;
+}
+
+.product-thumb:hover .thumb-image {
+    transform: scale(1.3);
 }
 
 .save-icon {
@@ -292,6 +314,7 @@ header {
     right: .5rem;
     width: 1rem;
     height: 1rem;
+    display: none;
 }
 
 .product-thumb {
@@ -425,33 +448,23 @@ ABOUT PAGE
 /*FIX LATER*/
 
 .bg-about-page {
-    background-color: #606060;
-    background-image: url('./images/about-top.jpg');
-    background-size: cover;
     height: 400px;
     width: 100vw;
     position: relative;
-    left:calc(-50vw + 50%);
+    left: calc(-50vw + 50%);
+    background: url('./images/about-top.jpg') rgba(0,0,0,0.2);
+    background-size: cover;
+    background-position:center;
+    background-blend-mode: multiply;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFF;
+}
+
+.bg-about-page h2 {
     font-size: 4rem;
-}
-
-.bg-about-page::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.2);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-.bg-about-page span {
-    z-index: 1;
+    font-weight: 400;
+    color: white;
 }
 
 .about-container {
@@ -530,7 +543,8 @@ USER PAGE
 .user-bio-thumbnail {
     width: 100px;
     height: 100px;
-    background-color: #606060;
+    background-image: url('./images/user-profile-unsplash.jpg');
+    background-size: cover;
     border-radius: 50%;
     margin-right: 1rem;
 }
@@ -779,7 +793,8 @@ USER PAGE
     }
 
     .dropdown-user-thumbnail {
-        background-color: #606060;
+        background-image: url('./images/user-profile-unsplash.jpg');
+        background-size: cover;
         width: 50px;
         height: 50px;
         border-radius: 50%;

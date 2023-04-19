@@ -89,10 +89,15 @@ function Header() {
                                 <img src={CartIcon} onClick={() => open()} alt='' />
                             </li>
                             <li className="nav-menu-buttons">
-                                <div onMouseLeave={() => hideProfileMenu()} onMouseOver={() => showProfileMenu()} className="header-buttons">
+                                <Link to='/user'>
+                                    <div className="header-buttons">
+                                        <img src={HeaderProfileIcon} alt='' />
+                                    </div>
+                                </Link>
+                                {/* <div onMouseLeave={() => hideProfileMenu()} onMouseOver={() => showProfileMenu()} className="header-buttons">
                                     <img src={HeaderProfileIcon} alt='' />
                                     {showDropdownProfileMenu && <DropdownProfileMenu />}
-                                </div>
+                                </div> */}
                             </li>
                         </ul>
                     </nav>

@@ -5,7 +5,7 @@ function ProductsItem({ item }) {
     return(
         <li className="product-item">
             <div className="product-thumb">
-                <img src={item.thumbnail} />
+                <img src={item.thumbnail} className="thumb-image" />
             </div>
             <h3 className="product-name">{item.name}</h3>
             <p className="product-price">{priceFormat}</p>

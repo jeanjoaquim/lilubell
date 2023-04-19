@@ -1,7 +1,11 @@
+import AboutTopImage from '../images/about-top.jpg';
+
 function AboutPage() {
     return (
       <>
-        <div className="bg-about-page"><span>Lilubell</span></div>
+        <div className="bg-about-page">
+            <h2>Lilubell</h2>
+        </div>
         <div className="about-container">
             <div className="about-text-block">
                 <h2 className="title-t1">Lorem Ipsum</h2>
